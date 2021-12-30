@@ -9,5 +9,9 @@ public class StackNQueue {
         list.push(30);
         list.push(56);
         list.display();
+
+        System.out.println("PEEK");
+        list.peek();
+
     }
 }
