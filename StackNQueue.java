@@ -17,5 +17,11 @@ public class StackNQueue {
         list.pop();
         list.display();
 
+        System.out.println("QUEUE");
+        list.queue(70);
+        list.queue(30);
+        list.queue(56);
+        list.display();
+
     }
 }
