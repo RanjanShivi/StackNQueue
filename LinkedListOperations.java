@@ -12,27 +12,36 @@ public class LinkedListOperations {
             tail = newNode;
         } else {
             Node tempNode = head;
-            this.head = newNode;
+            head = newNode;
             newNode.next = tempNode;
         }
-        top=head;
+        top = head;
     }
 
     public void peek(){
-        System.out.println("Top element is "+this.top.data);
+        System.out.println("Top element is "+ top.data);
     }
 
     public void remove() {
-        Node temp =top;
-        while (temp != null){
-            Node tempNode = this.head;
-            this.head = tempNode.next;
-            temp=temp.next;
+
+        if (top == null)
+            System.out.println("Stack Empty");
+        else if (head.next == null) {
+            System.out.println(head.data + "removed");
+            head = null;
+        } else {
+            while (top != null) {
+                Node temp = head;
+                System.out.println(temp.data + " Removed...");
+                head = head.next;
+                temp = temp.next;
+                top = head;
+            }
         }
     }
 
     public void append(int data) {
-        Node newNode=new Node(data);
+        Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
             tail = newNode;
