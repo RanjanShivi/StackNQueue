@@ -13,5 +13,9 @@ public class StackNQueue {
         System.out.println("PEEK");
         list.peek();
 
+        System.out.println("POP");
+        list.pop();
+        list.display();
+
     }
 }
