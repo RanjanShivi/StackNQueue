@@ -48,7 +48,7 @@ public class LinkedListOperations {
             top=head;
         } else {
             Node tempNode=tail;
-            this.tail=newNode;
+            tail=newNode;
             tempNode.next=tail;
         }
     }
